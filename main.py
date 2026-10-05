@@ -92,8 +92,7 @@ def main():
                "volume", "turnover", "deals", "bids",
                 "offers", "mktcap"
                 ]
-    final = combined[COLUMNS].copy(
-
+    final = combined[COLUMNS].copy()
     final.to_csv(FILE, index=False)
     return None
     
