@@ -88,8 +88,13 @@ def main():
                         .reset_index(drop=True)
                         )
 
+    COLUMNS = ["date", "ticker", "open", "high", "low", "close", "change", "% change", 
+               "volume", "turnover", "deals", "bids",
+                "offers", "mktcap"
+                ]
+    final = combined[COLUMNS].copy(
 
-    combined.to_csv(FILE, index=False)
+    final.to_csv(FILE, index=False)
     return None
     
 
